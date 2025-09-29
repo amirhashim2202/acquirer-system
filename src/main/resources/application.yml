@@ -1,0 +1,7 @@
+server:
+  port: 8081
+  error:
+    include-stacktrace: never   # Do not show stacktrace in response
+    include-message: never      # Do not expose error message
+    whitelabel:
+      enabled: false            # Disable default Spring Boot error page

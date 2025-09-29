@@ -1,0 +1,88 @@
+{
+  "info": {
+    "name": "Payment System API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Sale",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"currency\": \"USD\",\n  \"amount\": \"101\",\n  \"paymentProfileId\": 1\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sale",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sale"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Refund",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"reference\": \"PM-REF-1001\",\n  \"currency\": \"USD\",\n  \"amount\": \"101\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/refund",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "refund"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Payments",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/payments?page=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "payments"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
